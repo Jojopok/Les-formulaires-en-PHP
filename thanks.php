@@ -16,7 +16,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     ) {
         $message = "Il manque des information !";
     } else {
-        if (!filter_var($user_email, FILTER_VALIDATE_EMAIL)) {
+        if (!filter_var($user_email)) {
             $message = "L'adresse e-mail n'est pas au format attendu.";
         } else {
             $message = "Merci $prenom $user_name de nous avoir contacté à propos de $sujet. Un de nos conseillers vous contactera soit à l’adresse $user_email ou par téléphone au $phone dans les plus brefs délais pour traiter votre demande : $user_message";
